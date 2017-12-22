@@ -9,16 +9,16 @@ import org.gradle.api.Project
 class GreetingPlugin implements Plugin<Project> {
 
     void apply(Project project) {
-        project.task('hello') {
-            group = "greeting task"
+        project.task('helloTask') {
+            group = "Greeting Plugins"
             doLast {
                 println "Hello from the GreetingPlugin"
             }
         }
 
         def extension = project.extensions.create('greeting', GreetingPluginExtension)
-        project.task('helloMessage') {
-            group = "greeting task"
+        project.task('helloMessageTask') {
+            group = "Greeting Plugins"
             doLast {
                 println "${extension.message} from ${extension.greeter}"
             }

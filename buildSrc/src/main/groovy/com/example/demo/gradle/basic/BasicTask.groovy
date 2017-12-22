@@ -10,7 +10,6 @@ class BasicTask extends DefaultTask {
 
     @TaskAction
     def taskAction() {
-//        println project.buildSrcPluginExtension.message
         println project.extensions.getByName("basic").message
     }
 

@@ -11,3 +11,6 @@ greeting {
 
 apply plugin: com.example.demo.gradle.basic.BasicPlugin
 basic.message = "Overridden message."
+
+
+apply from: 'testPlugin.gradle'

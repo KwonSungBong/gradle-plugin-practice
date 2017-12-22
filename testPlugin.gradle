@@ -1,0 +1,12 @@
+apply plugin: TestPlugin
+
+class TestPlugin implements Plugin<Project> {
+    void apply(Project project) {
+        project.task('testTask') {
+            group = "Test Plugins"
+            doLast {
+                println "Hello from the TestPlugin"
+            }
+        }
+    }
+}
